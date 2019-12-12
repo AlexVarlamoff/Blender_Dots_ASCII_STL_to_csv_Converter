@@ -22,10 +22,9 @@ with open('text1.txt', 'r') as inf, open('text.txt', 'w') as out:
         if line.strip():
             out.write(line)
 
-# открытие файла, чтение, закрытие
 with open("text.txt", "r") as f:
     data = f.readlines()
-# удаление строк, для которых выполнено условие
+#deleting rows
 data = filter(lambda line: "facet" not in line, data)
 with open("text1.txt", "w") as f:
     f.write("".join(data))
