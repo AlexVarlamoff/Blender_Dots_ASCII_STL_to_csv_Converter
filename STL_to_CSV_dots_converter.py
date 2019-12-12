@@ -1,7 +1,7 @@
 import os
 
 #last row deleting
-with open("salesforce.txt", "r") as f:
+with open("text.txt", "r") as f:
     data = f.readlines()
 data = filter(lambda line: "endsolid" not in line, data)
 with open("text.txt", "w") as f:
